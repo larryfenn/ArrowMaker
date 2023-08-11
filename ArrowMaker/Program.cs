@@ -10,12 +10,12 @@ namespace ArrowMaker
         static void Main(string[] args)
         {
             Dictionary<int, Device> devices = new Dictionary<int, Device>();
-            int port = 5005;
             int n_devices = 1;
             int delay = 50;
+            int port = 5005;
             // first arg is # of devices
-            // second arg if it exists is port
-            // third arg is time between device transmissions
+            // second arg is time between device transmissions
+            // third arg if it exists is port
             if (args.Length > 0)
             {
                 n_devices = Int32.Parse(args[0]);
@@ -23,12 +23,12 @@ namespace ArrowMaker
 
             if (args.Length > 1)
             {
-                port = Int32.Parse(args[1]);
+                delay = Int32.Parse(args[1]);
             }
 
             if (args.Length > 2)
             {
-                delay = Int32.Parse(args[2]);
+                port = Int32.Parse(args[2]);
             }
 
             for (int i = 0; i < n_devices; i++)
